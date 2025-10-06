@@ -1,40 +1,147 @@
-*{
-    border:solid rgb(246, 246, 246) 1px;
+/* Reset & Base */
+* {
     box-sizing: border-box;
 }
 
-html, body{
-    margin: 0px;
-    padding: 0px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #004593;
     color: white;
 }
 
-.main-div{
-    height: 800px;
-    background-color: #004593ff;
+/* Layout principale */
+.main-div {
+    background-color: #004593;
     display: flex;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
-.first-child{
-    width: 900px;
+.first-child {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
-.divider{
-    height: 3px;
-    background-color: white;
-}
-.second-child{
-    flex-grow: 1;
-}
-
-.second-child-fat{
-    flex-grow: 3;
+.second-child-fat {
     display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
 }
-.first-nephew{
-    width: 33%;
+
+.first-nephew {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background-color: white;
+    opacity: 0.5;
+    margin: 15px 0;
+}
+
+/* Emodnet Footer Section */
+.Emodnet-footer {
+    background-color: #004593;
+    padding: 40px 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titoli */
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.first-nephew ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.first-nephew ul li {
+    margin-bottom: 6px;
+}
+
+/* Social links */
+.first-nephew a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.first-nephew a:hover {
+    text-decoration: underline;
+}
+
+/* More info section */
+.second-child h4 {
+    margin-bottom: 10px;
+}
+
+.second-child p,
+.second-child div {
+    margin-bottom: 5px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.footer-col-eu img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-col-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col-info ul li {
+    margin-bottom: 6px;
+}
+
+.footer-links div {
+    margin-bottom: 6px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .second-child-fat {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .first-nephew {
+        width: 100%;
+    }
+
+    .footer-col-eu img {
+        width: 80px;
+    }
 }
