@@ -37,6 +37,10 @@ body {
 .first-nephew {
     flex: 1;
     min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Aggiunto uno spazio tra gli elementi verticali */
 }
 
 /* Divider */
@@ -68,10 +72,13 @@ h4 {
     margin-bottom: 10px;
 }
 
+/* Spaziatura tra gli elementi nelle liste */
 .first-nephew ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
+    gap: 10px;
+    /* Aggiungi gap tra gli elementi delle liste */
 }
 
 .first-nephew ul li {
